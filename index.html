@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>選挙ポスター掲示場所マップ</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>選挙ポスター掲示場所マップ</h1>
+    <div id="count-info">読み込み中...</div>
+  </header>
+  <div id="main">
+    <div id="map"></div>
+    <div id="detail-panel">
+      <p class="placeholder">マーカーをクリックすると詳細が表示されます。</p>
+    </div>
+  </div>
+
+  <script src="src/data.js"></script>
+  <script src="src/app.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz8MyaiIUCu1vnTV5MAwmawNr7a8krpzc&callback=initMap"
+    async defer>
+  </script>
+</body>
+</html>
