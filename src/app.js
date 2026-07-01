@@ -101,7 +101,10 @@ function markerIcon(id, selected) {
 
 function showDetail(item) {
   var panel = document.getElementById('detail-panel');
+  var isMobile = window.innerWidth <= 640;
+
   panel.innerHTML =
+    (isMobile ? '<button id="panel-close" class="panel-close-btn">✕</button>' : '') +
     '<p class="detail-title">選択中のポスター掲示場所</p>' +
     '<dl>' +
       '<dt>No.</dt><dd>' + item.id + '</dd>' +
@@ -111,6 +114,14 @@ function showDetail(item) {
       '<dt>経度</dt><dd>' + item.lng + '</dd>' +
       '<dt>座標確認</dt><dd>' + item.status + '</dd>' +
     '</dl>';
+
+  panel.classList.add('panel-active');
+
+  if (isMobile) {
+    document.getElementById('panel-close').addEventListener('click', function() {
+      panel.classList.remove('panel-active');
+    });
+  }
 }
 
 function createMarker(map, item) {
