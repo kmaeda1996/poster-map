@@ -9,7 +9,13 @@
 <body>
   <header>
     <h1>選挙ポスター掲示場所マップ</h1>
-    <div id="count-info">読み込み中...</div>
+    <div id="header-bottom">
+      <div id="count-info">読み込み中...</div>
+      <div id="mode-controls">
+        <button id="btn-mode1" class="mode-btn mode-btn-active" onclick="setMode(1)">全表示</button>
+        <button id="btn-mode2" class="mode-btn" onclick="setMode(2)">配分表示</button>
+      </div>
+    </div>
   </header>
   <div id="main">
     <div id="map"></div>
@@ -19,6 +25,7 @@
   </div>
 
   <script src="src/data.js"></script>
+  <script src="src/distribution.js"></script>
   <script src="src/app.js"></script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz8MyaiIUCu1vnTV5MAwmawNr7a8krpzc&callback=initMap"

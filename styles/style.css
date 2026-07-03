@@ -22,9 +22,44 @@ header h1 {
   font-size: 1.05rem;
 }
 
+#header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+}
+
 #count-info {
   font-size: 0.78rem;
   color: #bee3f8;
+}
+
+#mode-controls {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.mode-btn {
+  padding: 3px 10px;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 0.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mode-btn:hover {
+  background: rgba(255,255,255,0.22);
+}
+
+.mode-btn-active {
+  background: rgba(255,255,255,0.32);
+  border-color: #fff;
+  font-weight: bold;
 }
 
 #main {
