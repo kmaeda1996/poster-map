@@ -459,16 +459,16 @@ var POSTER_DATA = [
     id: 58,
     address: '福井県越前市松森町29－19',
     description: '松森町29－19ブロック塀',
-    lat: 35.8898816,
-    lng: 136.1637445,
+    lat: 35.885297,
+    lng: 136.165238,
     status: 'ok'
   },
   {
     id: 59,
     address: '福井県越前市曙町2',
     description: '曙公園',
-    lat: 35.88570948,
-    lng: 136.1669516,
+    lat: 35.888067,
+    lng: 136.166778,
     status: 'ok'
   },
   {
